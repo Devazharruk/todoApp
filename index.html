@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+            <div class="input-box">
+                <input type="text" placeholder="Enter your task" id="task-input">
+                <button id="add-task">Add Task</button>
+            </div>
+            <div class="error-box">
+                <p>Please Write Your Task</p>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search Task" id="search">
+            </div>
+
+            <div class="task-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Task</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="task-data">
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>Row 1, Cell 2</td>
+                            <td>
+                                <button class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                <button class="delete"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/5ac6bf8fc0.js" crossorigin="anonymous"></script>
+</body>
+</html>
