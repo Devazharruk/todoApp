@@ -13,6 +13,11 @@ if (objStr != null) {
     tasksArray = JSON.parse(objStr);
 }
 
+/**
+ * Adds a new task or edits an existing task based on user input
+ * @param {Event} event - The click event object (implicitly passed)
+ * @returns {void} This function doesn't return a value
+ */
 addTaskBtn.addEventListener("click", () => {
     const inputValue = taskInputField.value;
     if (edit_id != null) {
@@ -37,6 +42,11 @@ const saveTask = (array) => {
 // function to display the Tasks
 const displayTask = () => {
     let taskElem = "";
+    /**
+     * Generates HTML markup for task list rows
+     * @param {Array} tasksArray - An array of task objects
+     * @returns {string} HTML string representing table rows for each task
+     */
     tasksArray.forEach((data, index) => {
         taskElem += `<tr>
                             <td>${index + 1}</td>
@@ -59,6 +69,15 @@ const editTask = (id) => {
 
 // function to delete the Tasks
 const deleteTask = (id) => {
+    ```
+    /**
+     * Filters and appends table rows based on user search input
+     * @param {NodeList} allTrs - All table rows to be filtered
+     * @param {string} userSearch - The search term entered by the user
+     * @param {HTMLElement} taskDataContainer - The container to append matching rows
+     * @returns {void} This function doesn't return a value, it modifies the DOM
+     */
+    ```
     tasksArray.splice(id, 1);
     saveTask(tasksArray);
 }
@@ -66,6 +85,11 @@ displayTask();
 
 // logic for search functionality
 const allTrs = document.querySelectorAll("#task-data tr");
+/**
+ * Adds an event listener to the search input field to filter tasks based on user input
+ * @param {Event} e - The input event object
+ * @returns {void} This function does not return a value
+ */
 seachInputField.addEventListener("input", (e) => {
     const userSearch = e.target.value.toLowerCase();
     taskDataContainer.innerHTML = "";
